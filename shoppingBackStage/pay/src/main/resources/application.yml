@@ -1,0 +1,23 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: pay-server
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/shopping_mall?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: are15749926
+alipay:
+  appId: "9021000160690178"
+  appPrivateKey: "MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCtXpZijZOPp6ZLIhCfnLFz/ORYyOqdfBwMnCYMU/fRdY9LQx+phhFcKOcI2jBwCzZg5LqbkvPT+eVgOJ1tUIQd5gHFDRgBrbWHE68fP9X06kYSz//o/IGEu0evG0CNvSOOPiEjmVkKUPDK+f1c38DiT0l7AjFauYMPTW+wOrnJU1dkLiXRak5Scl1HlHcFQP2pzud7PFEUBfcAh/89ZCZuhuqQi69GAbvhDTtt/ElwjmfeWzjktieW1nAzGnf4mnveNhmEDzUJ8mkEDYuhMUziBsiRMjy44hDgsGY6sUvWEMtrC7EYo66tiUoAZ7XaTDxjBZWxxcFXMKD1jf/90RtnAgMBAAECggEAGxHu11qV1NNvksGx6Mo1pw+ws/BDOe3cD1f+VORziIAbrLvBYN3vLf2w/V/cOlJ13jE4tfv/GHUnjJuqcRwmVOjKE/OUcQanlnzLVkzIYqKF6IATzFRJAOmhKsVNkhQbTiWDVSSnk4XJ41efaPYDDxMkPRG9lRXsUeJccx7oTXf1CiEpVRAipnZFJZxV0iqKESrEIBcyzCLA+nYCHcdZk4JQstmuRI00nFDkM/J1KBmLgkVfcdVYqtQ+dgI60dPCNGL2h/OKYCJvQBuj70jLhjDg1ixVaeq5pn0hfH/w1XC63/4gXvxzIsyZsItElPdihqIvj0OWTjH3S9ApLy2meQKBgQDdLi98cOmEmc3c9Y+HZgTVWPY7b011CrcCRCu8KND5r8WoPvsP6KdQnEaoBqgkWRqs+guaO+Hsk+yka9RCaWAYovlkJVVsJpLNU64eQBh2wsNChP9udeBkucWhzewqONfUGikHCJFFSi9cgmPC8l6jQPNYUXse8O2J0/vOix47swKBgQDIqZGZvFRDw8b1p1DG7oFS7WHu/vdRbuoCVvdnVeIFElCTq4q9lFqddwXBigkw6ScjMVd1DQcaT0SGmYz8pOdHrxZPLWPkkLJa5/ankimNeQpCQAEunxDkyQ7xUJcRBK3c9HJ6gKDbInao/edmtEsswjAa92QjN8xsBQpGepu3fQKBgDf2ZaFw2ETqvYG4yBYUJAjvN24WXVzN1zxFj2NOWIG0jahiNxfxX9QvllkRRh3cRbmakrD1kdZQH0IC3nPnQZ86LSu/nnt8zwwQri+NPCNgaBM+n3qNbLdPoces2KJeO425CMR00Hzdploby64ZsQRRfMDN7P8JKrEC5+V8oautAoGABzLGDVzLLQ8l4QQairhdnUr0u20cFCjFbkYOY/+ZtxLcHyAFPx3GTmXJqBK6l62VgNaxS3qnKZN0Ytu5SgrkXRbz1u1K6xUhwM8XcxV0NiYEbzH6mOCN65cm2RNKCAtB7W47eReKLbJDzXYmSfHnzHg+34jGZ9kFlU5s+vBFC8UCgYAmEOJ29ErqdJS921FKqpu0Ab55m9j/uPlG9U4jZSYJETgoz73w2CuSntsoBEnpiq31O+84pa1+9xC8crLaXFByDj9id+ce98Vl+gda0AnnQeT+qUeyPuNh2E4JgaqYMoHxQhF6wgE+SDv4Y6inmd/p5PrNv90fQlXcdJMQFX+RrA=="
+  alipayPublicKey: "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAitstyoTNvck+lRZa78t4rC+gH65y2oSeMPEVcY4NU4uiYFse14Z7Yq9QP6wsZq390unUt86Ee2hdWc9G5ghyvJXWH8z19LW9ymEt/Ra83GuFAXmhDyGSNtm06NLb6aOddsjQ0CQaTYMBGD58AF+a9qJLzmJtaLRql9f04nrpsGWagy56Yonip97ijO5EPj4S02ngqoOmI8Iq+EIphDMGTiqEHl4F8PuGBLMgpB4vX4E+eHy/1KUA++6AjKSrXVrtO31bPxo4y84FKAxUka0BbAan7xQvmqjSdOnQ4yHX+ftNRSxPHt7+Q18+Nsk/IgfGyN9t0grCnFL96JS4OQK9RQIDAQAB"
+  notifyUrl: "https://b43d828e.natappfree.cc/alipay/notify"
+  # 沙箱网关（旧地址 openapi.alipaydev.com 可能 502，请用新地址）
+  gatewayUrl: https://openapi-sandbox.dl.alipaydev.com/gateway.do
+  returnUrl: http://127.0.0.1:5173/pay/result
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: false

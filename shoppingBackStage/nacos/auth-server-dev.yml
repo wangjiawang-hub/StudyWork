@@ -1,0 +1,27 @@
+  # Nacos 配置：auth-server-dev.yml
+  # Group: DEFAULT_GROUP
+  # 命名空间: 5b364fd6-338f-4e19-9a45-738cc3938d1c
+  #
+  # 说明：若与本地 application.yml 重复，Nacos 发布后以 Nacos 为准。
+  # 开发环境可留空（仅本地 application.yml），或只放 Redis 等公共项。
+
+  spring:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      timeout: 3000ms
+
+  shopping:
+    captcha:
+      console: true
+
+  # 数据库建议放 application-dev.yml 统一管理，此处可不写
+  # spring:
+  #   datasource:
+  #     url: jdbc:mysql://127.0.0.1:3306/shopping_mall?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+  #     username: root
+  #     password: 你的密码
+
+  mybatis:
+    configuration:
+      map-underscore-to-camel-case: true

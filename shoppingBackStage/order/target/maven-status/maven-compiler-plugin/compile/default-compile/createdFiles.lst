@@ -1,0 +1,15 @@
+order\orderApplication.class
+order\mapper\ConfigMapper.class
+order\service\impl\OrderServiceImpl$1.class
+order\mq\RabbitMqConfig.class
+order\service\CartServiceFeignClient.class
+order\service\impl\OrderServiceImpl.class
+order\service\CouponFeignClient.class
+order\service\MallConfigReader.class
+order\service\OrderService.class
+order\mapper\OrderMapper.class
+order\service\impl\CouponFeignClientFallback.class
+order\mq\OrderCreatedListener.class
+order\controller\OrderController.class
+order\mq\OrderEventPublisher.class
+order\service\impl\CartServiceFeignClientFallback.class

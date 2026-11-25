@@ -1,0 +1,33 @@
+{
+  "groups": [
+    {
+      "name": "security.ignore",
+      "type": "gateway.config.IgnoreWhiteProperties",
+      "sourceType": "gateway.config.IgnoreWhiteProperties"
+    },
+    {
+      "name": "shopping.auth",
+      "type": "gateway.config.ShoppingAuthProperties",
+      "sourceType": "gateway.config.ShoppingAuthProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "security.ignore.effective-whites",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "gateway.config.IgnoreWhiteProperties"
+    },
+    {
+      "name": "security.ignore.whites",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "gateway.config.IgnoreWhiteProperties"
+    },
+    {
+      "name": "shopping.auth.jwt-only",
+      "type": "java.lang.Boolean",
+      "description": "开发模式：仅校验 JWT 签名，不依赖 Redis 会话",
+      "sourceType": "gateway.config.ShoppingAuthProperties"
+    }
+  ],
+  "hints": []
+}

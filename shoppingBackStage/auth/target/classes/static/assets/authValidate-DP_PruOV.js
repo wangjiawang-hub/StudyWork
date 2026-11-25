@@ -1,0 +1,1 @@
+var e=/^1[3-9]\d{9}$/,t=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;function n(t){return e.test(String(t||``).trim())}function r(e){return t.test(String(e||``).trim())}function i(e){let t={...e};for(let e of[`username`,`password`,`phone`,`email`,`captchaCode`])typeof t[e]==`string`&&(t[e]=t[e].trim());return t}export{n,i as r,r as t};

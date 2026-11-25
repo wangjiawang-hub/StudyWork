@@ -1,0 +1,3 @@
+userservice\mapper\UserBizMapper.class
+userservice\controller\UserBizController.class
+userservice\UserServiceApplication.class

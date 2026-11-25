@@ -1,0 +1,16 @@
+aiservice\entity\AiSession.class
+aiservice\controller\AiChatController.class
+aiservice\entity\AiMessage.class
+aiservice\dto\ChatRequest.class
+aiservice\AiServiceApplication.class
+aiservice\service\AiChatService.class
+aiservice\controller\AiSessionController.class
+aiservice\mapper\AiMessageMapper.class
+aiservice\entity\Knowledge.class
+aiservice\config\ArkProperties.class
+aiservice\service\AiChatService$1.class
+aiservice\config\AiModelConfig.class
+aiservice\service\KnowledgeService.class
+aiservice\mapper\KnowledgeMapper.class
+aiservice\mapper\AiSessionMapper.class
+aiservice\controller\KnowledgeController.class

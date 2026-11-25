@@ -1,0 +1,6 @@
+# Nacos 配置：admin-service-dev.yml（需新增）
+# 开发环境可留空
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true

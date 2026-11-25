@@ -1,0 +1,7 @@
+auth\controller\UserController.class
+auth\service\UserService.class
+auth\mapper\UserMapper.class
+auth\service\CaptchaService.class
+auth\controller\GlobalExceptionHandler.class
+auth\service\impl\UserServiceImpl.class
+auth\authApplication.class

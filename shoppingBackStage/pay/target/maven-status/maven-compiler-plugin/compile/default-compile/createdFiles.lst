@@ -1,0 +1,5 @@
+pay\controller\AliPayController$1.class
+pay\mapper\OrderMapper.class
+pay\controller\AliPayController.class
+pay\payApplication.class
+pay\config\AliPayConfig.class

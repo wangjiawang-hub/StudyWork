@@ -1,0 +1,5 @@
+goods\goodsApplication.class
+goods\mapper\ProductMapper.class
+goods\controller\ProductController.class
+goods\service\impl\ProductServiceImpl.class
+goods\service\ProductService.class

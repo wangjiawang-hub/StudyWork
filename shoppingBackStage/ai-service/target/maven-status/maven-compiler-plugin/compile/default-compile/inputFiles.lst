@@ -1,0 +1,15 @@
+C:\Users\W\Downloads\StudyWork\StudyWork\shoppingBackStage\ai-service\src\main\java\aiservice\AiServiceApplication.java
+C:\Users\W\Downloads\StudyWork\StudyWork\shoppingBackStage\ai-service\src\main\java\aiservice\config\AiModelConfig.java
+C:\Users\W\Downloads\StudyWork\StudyWork\shoppingBackStage\ai-service\src\main\java\aiservice\config\ArkProperties.java
+C:\Users\W\Downloads\StudyWork\StudyWork\shoppingBackStage\ai-service\src\main\java\aiservice\controller\AiChatController.java
+C:\Users\W\Downloads\StudyWork\StudyWork\shoppingBackStage\ai-service\src\main\java\aiservice\controller\AiSessionController.java
+C:\Users\W\Downloads\StudyWork\StudyWork\shoppingBackStage\ai-service\src\main\java\aiservice\controller\KnowledgeController.java
+C:\Users\W\Downloads\StudyWork\StudyWork\shoppingBackStage\ai-service\src\main\java\aiservice\dto\ChatRequest.java
+C:\Users\W\Downloads\StudyWork\StudyWork\shoppingBackStage\ai-service\src\main\java\aiservice\entity\AiMessage.java
+C:\Users\W\Downloads\StudyWork\StudyWork\shoppingBackStage\ai-service\src\main\java\aiservice\entity\AiSession.java
+C:\Users\W\Downloads\StudyWork\StudyWork\shoppingBackStage\ai-service\src\main\java\aiservice\entity\Knowledge.java
+C:\Users\W\Downloads\StudyWork\StudyWork\shoppingBackStage\ai-service\src\main\java\aiservice\mapper\AiMessageMapper.java
+C:\Users\W\Downloads\StudyWork\StudyWork\shoppingBackStage\ai-service\src\main\java\aiservice\mapper\AiSessionMapper.java
+C:\Users\W\Downloads\StudyWork\StudyWork\shoppingBackStage\ai-service\src\main\java\aiservice\mapper\KnowledgeMapper.java
+C:\Users\W\Downloads\StudyWork\StudyWork\shoppingBackStage\ai-service\src\main\java\aiservice\service\AiChatService.java
+C:\Users\W\Downloads\StudyWork\StudyWork\shoppingBackStage\ai-service\src\main\java\aiservice\service\KnowledgeService.java

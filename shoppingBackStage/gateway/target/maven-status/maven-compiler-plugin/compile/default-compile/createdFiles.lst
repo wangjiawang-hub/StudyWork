@@ -1,0 +1,8 @@
+gateway\config\OpenApiConfig.class
+gateway\config\ShoppingAuthProperties.class
+gateway\gatewayApplication.class
+gateway\config\IgnoreWhiteProperties.class
+gateway\controller\fallback.class
+gateway\config\CustomizeCircuitBreakerConfig.class
+gateway\filter\AuthFilter.class
+META-INF\spring-configuration-metadata.json

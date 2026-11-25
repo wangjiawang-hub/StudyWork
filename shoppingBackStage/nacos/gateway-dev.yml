@@ -1,0 +1,213 @@
+# 复制到 Nacos 配置中心
+# Data ID: gateway-dev.yml
+# Group: DEFAULT_GROUP
+# 命名空间: 5b364fd6-338f-4e19-9a45-738cc3938d1c
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: auth
+          uri: lb://auth-server
+          predicates:
+            - Path=/auth/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: authBreaker
+                fallbackUri: forward:/authfallback
+
+        - id: goods
+          uri: lb://goods-server
+          predicates:
+            - Path=/goods/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: goodsBreaker
+                fallbackUri: forward:/goodsfallback
+
+        - id: cart
+          uri: lb://carts-server
+          predicates:
+            - Path=/cart/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: cartBreaker
+                fallbackUri: forward:/cartfallback
+
+        - id: order
+          uri: lb://order-server
+          predicates:
+            - Path=/order/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: orderBreaker
+                fallbackUri: forward:/orderfallback
+
+        - id: pay
+          uri: lb://pay-server
+          predicates:
+            - Path=/alipay/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: payBreaker
+                fallbackUri: forward:/payfallback
+
+        - id: user
+          uri: lb://user-service
+          predicates:
+            - Path=/user/**
+
+        - id: coupon
+          uri: lb://coupon-service
+          predicates:
+            - Path=/coupon/**
+
+        - id: admin
+          uri: lb://admin-service
+          predicates:
+            - Path=/admin/**
+
+        # 人工客服 REST 接口归属 admin-service，须放在 /ai/** 之前优先匹配
+        - id: admin-chat
+          uri: lb://admin-service
+          predicates:
+            - Path=/ai/customer/**
+
+        - id: ai
+          uri: lb://ai-service
+          predicates:
+            - Path=/ai/**
+
+        # 人工客服 WebSocket，归属 admin-service
+        - id: admin-ws
+          uri: lb:ws://admin-service
+          predicates:
+            - Path=/ws/**
+
+        - id: openapi-auth
+          uri: lb://auth-server
+          predicates:
+            - Path=/api-docs/auth,/api-docs/auth/**
+          filters:
+            - RewritePath=/api-docs/auth(?<segment>/?.*), /v3/api-docs${segment}
+        - id: openapi-goods
+          uri: lb://goods-server
+          predicates:
+            - Path=/api-docs/goods,/api-docs/goods/**
+          filters:
+            - RewritePath=/api-docs/goods(?<segment>/?.*), /v3/api-docs${segment}
+        - id: openapi-cart
+          uri: lb://carts-server
+          predicates:
+            - Path=/api-docs/cart,/api-docs/cart/**
+          filters:
+            - RewritePath=/api-docs/cart(?<segment>/?.*), /v3/api-docs${segment}
+        - id: openapi-order
+          uri: lb://order-server
+          predicates:
+            - Path=/api-docs/order,/api-docs/order/**
+          filters:
+            - RewritePath=/api-docs/order(?<segment>/?.*), /v3/api-docs${segment}
+        - id: openapi-pay
+          uri: lb://pay-server
+          predicates:
+            - Path=/api-docs/pay,/api-docs/pay/**
+          filters:
+            - RewritePath=/api-docs/pay(?<segment>/?.*), /v3/api-docs${segment}
+        - id: openapi-user
+          uri: lb://user-service
+          predicates:
+            - Path=/api-docs/user,/api-docs/user/**
+          filters:
+            - RewritePath=/api-docs/user(?<segment>/?.*), /v3/api-docs${segment}
+        - id: openapi-coupon
+          uri: lb://coupon-service
+          predicates:
+            - Path=/api-docs/coupon,/api-docs/coupon/**
+          filters:
+            - RewritePath=/api-docs/coupon(?<segment>/?.*), /v3/api-docs${segment}
+        - id: openapi-admin
+          uri: lb://admin-service
+          predicates:
+            - Path=/api-docs/admin,/api-docs/admin/**
+          filters:
+            - RewritePath=/api-docs/admin(?<segment>/?.*), /v3/api-docs${segment}
+        - id: openapi-ai
+          uri: lb://ai-service
+          predicates:
+            - Path=/api-docs/ai,/api-docs/ai/**
+          filters:
+            - RewritePath=/api-docs/ai(?<segment>/?.*), /v3/api-docs${segment}
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
+shopping:
+  auth:
+    jwt-only: true
+
+security:
+  ignore:
+    whites:
+      - /auth/login
+      - /auth/login/code
+      - /auth/admin/login
+      - /auth/register
+      - /auth/captcha
+      - /auth/sendCode
+      - /goods/**
+      - /admin/config/public
+      - /user/review/list
+      - /alipay/notify
+      - /ai/chat
+      - /ai/chat/stream
+      - /ai/sessions/**
+      - /ai/customer/**
+      - /ws/**
+      - /api-docs/**
+      - /v3/api-docs/**
+      - /webjars/**
+      - /swagger-ui/**
+      - /swagger-ui.html
+
+springdoc:
+  enable-native-support: true
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    config-url: /v3/api-docs/swagger-config
+    urls-primary-name: 认证服务
+    urls:
+      - name: 认证服务
+        url: /api-docs/auth
+      - name: 商品服务
+        url: /api-docs/goods
+      - name: 购物车服务
+        url: /api-docs/cart
+      - name: 订单服务
+        url: /api-docs/order
+      - name: 支付服务
+        url: /api-docs/pay
+      - name: 用户服务
+        url: /api-docs/user
+      - name: 优惠券服务
+        url: /api-docs/coupon
+      - name: 管理后台
+        url: /api-docs/admin
+      - name: AI服务
+        url: /api-docs/ai
+      - name: 网关降级
+        url: /v3/api-docs

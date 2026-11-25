@@ -1,0 +1,1 @@
+function e(e,t,n=300){return e&&!e.includes(`via.placeholder.com`)?e:`https://picsum.photos/seed/${t||`default`}/${n}/${n}`}export{e as t};

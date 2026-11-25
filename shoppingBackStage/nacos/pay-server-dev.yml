@@ -1,0 +1,16 @@
+# Nacos 配置：pay-server-dev.yml
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/shopping_mall?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 你的MySQL密码
+
+alipay:
+  appId: 你的沙箱AppId
+  appPrivateKey: 你的应用私钥（PKCS8，一行）
+  alipayPublicKey: 支付宝公钥（沙箱页面「支付宝公钥」，不是应用公钥）
+  notifyUrl: https://你的natapp域名/alipay/notify
+  # 新沙箱网关（旧 openapi.alipaydev.com 易 502）
+  gatewayUrl: https://openapi-sandbox.dl.alipaydev.com/gateway.do
+  returnUrl: http://127.0.0.1:5173/pay/result

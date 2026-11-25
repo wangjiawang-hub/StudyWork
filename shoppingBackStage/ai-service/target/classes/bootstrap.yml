@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: ai-service
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: 5b364fd6-338f-4e19-9a45-738cc3938d1c
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+        shared-configs:
+          - application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+        namespace: 5b364fd6-338f-4e19-9a45-738cc3938d1c

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>购物商城</title>
+    <!-- 高德地图 JS API：申请 Key 后替换下方 YOUR_AMAP_KEY，申请地址 https://lbs.amap.com/ -->
+      <script>
+          window._AMapSecurityConfig = {
+              securityJsCode: '6a913196f4e2e96269fb0edb395eb53a'
+          }
+      </script>
+      <script src="https://webapi.amap.com/maps?v=2.0&key=d31615856e1b59a9eb29fcc96db43f17&plugin=AMap.Marker,AMap.Polyline,AMap.Geocoder,AMap.Driving"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

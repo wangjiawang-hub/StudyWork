@@ -1,0 +1,6 @@
+# Nacos 配置：goods-server-dev.yml
+# 开发环境可留空；数据库已在 application-dev.yml 或本地 application.yml 配置即可
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true

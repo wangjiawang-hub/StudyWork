@@ -1,0 +1,7 @@
+adminservice\mapper\AdminMapper.class
+adminservice\AdminServiceApplication.class
+adminservice\controller\AdminController.class
+adminservice\service\CategoryConfigService$1.class
+adminservice\service\AdminUserService.class
+adminservice\service\CategoryConfigService.class
+adminservice\service\MallConfigService.class
